@@ -25,7 +25,7 @@ python eval_nets_pairs.py --cipher simeck3264 --scenario single-key  --input_dif
 
 ```
 
-- For example For example, running 
+- For example, running 
 ```bash
 python eval_nets_pairs.py --cipher speck3264 --scenario single-key  --input_difference 0x400000_0x502000 --round_number 8 --model_path ./models/speck3264_single-key_polish_dbitnet_round8_best_polish2.h5  --pairs 1
 ```
