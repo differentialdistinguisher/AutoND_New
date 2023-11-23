@@ -13,9 +13,7 @@ import csv
 
 
 import datetime
-# 获取当前时间
 current_time  = datetime.datetime.now()
-# 将时间对象转换为字符串
 time_string  = current_time.strftime("%Y-%m-%d_%H-%M-%S")
 
 
@@ -262,12 +260,6 @@ def main_strategy2(cipher_name, scenario, output_dir, best_differences,highest_r
         # break
     print(results)
     
-# python main_twodiff_strategy1.py speck3264 related-key
-# python main_twodiff_strategy1.py speck3264 related-key 1 -o speck3264
-# python main_twodiff_strategy1.py speck3264 related-key 2 -o speck3264
-# python main_twodiff_strategy1.py speck3264 related-key 4 -o speck3264
-# python main_twodiff_strategy1.py speck3264 related-key 8 -o speck3264
-# python main_twodiff_strategy1.py speck3264 single-key 2 -o speck3264
 
     
 if __name__ == "__main__":
