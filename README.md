@@ -19,7 +19,7 @@ python main.py cipher scenario strategy -o out_dir
   
 - For example
     ```bash
-    python main speck3264 single-key 2 -o results
+    python main.py speck3264 single-key 2 -o results
     ```
 
 ## 3. The folder **models** gives our enhanced neural distinguishers.
