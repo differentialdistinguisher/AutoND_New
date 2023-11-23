@@ -7,23 +7,37 @@
 - Hight
 
 
+## 2. If you want to run our code, please follow the pattern below
+```bash
+python main.py cipher scenario strategy -o out_dir
+```
+- cipher: the name of the cipher to be analyzed in the folder **ciphers**.
 
-## 2. The folder **models** gives our enhanced neural distinguishers.
+- scenario: the scenario, either single-key or related-key', default = 'single-key'. 
+- strategy: the strategy to perform differential pair selection, either 1 or 2', default = '2'. 
+- out_dir: the folder to store the experiments results, default ='results'.
+  
+- For example
+    ```bash
+    python main speck3264 single-key 2 -o results
+    ```
+
+## 3. The folder **models** gives our enhanced neural distinguishers.
 
 -   If you want to evaluate our neural distinguishers on fresh test datasets, please execute the following code
-```bash
+    ```bash
 
-python eval_nets_pairs.py --cipher speck3264 --scenario single-key  --input_difference 0x400000_0x502000 --round_number 8 --model_path ./models/speck3264_single-key_polish_dbitnet_round8_best_polish2.h5  --pairs 1
+    python eval_nets_pairs.py --cipher speck3264 --scenario single-key  --input_difference 0x400000_0x502000 --round_number 8 --model_path ./models/speck3264_single-key_polish_dbitnet_round8_best_polish2.h5  --pairs 1
 
-python eval_nets_pairs.py --cipher simon3264 --scenario single-key  --input_difference 0x400_0x100 --round_number 11 --model_path ./models/simon3264_single-key_polish_dbitnet_round11_best_polish2.h5  --pairs 1
+    python eval_nets_pairs.py --cipher simon3264 --scenario single-key  --input_difference 0x400_0x100 --round_number 11 --model_path ./models/simon3264_single-key_polish_dbitnet_round11_best_polish2.h5  --pairs 1
 
-python eval_nets_pairs.py --cipher simon3264 --scenario single-key  --input_difference 0x40_0x100 --round_number 12 --model_path ./models/simon3264_single-key_polish_dbitnet_round12_best_polish2.h5  --pairs 1
+    python eval_nets_pairs.py --cipher simon3264 --scenario single-key  --input_difference 0x40_0x100 --round_number 12 --model_path ./models/simon3264_single-key_polish_dbitnet_round12_best_polish2.h5  --pairs 1
 
-python eval_nets_pairs.py --cipher simeck3264 --scenario single-key  --input_difference 0x4000_0x8000 --round_number 11 --model_path ./models/simeck3264_single-key_polish_dbitnet_round11_best_polish2.h5  --pairs 1
+    python eval_nets_pairs.py --cipher simeck3264 --scenario single-key  --input_difference 0x4000_0x8000 --round_number 11 --model_path ./models/simeck3264_single-key_polish_dbitnet_round11_best_polish2.h5  --pairs 1
 
-python eval_nets_pairs.py --cipher simeck3264 --scenario single-key  --input_difference 0x4000_0x2000 --round_number 12 --model_path ./models/simeck3264_single-key_polish_dbitnet_round12_best_polish2.h5  --pairs 1
+    python eval_nets_pairs.py --cipher simeck3264 --scenario single-key  --input_difference 0x4000_0x2000 --round_number 12 --model_path ./models/simeck3264_single-key_polish_dbitnet_round12_best_polish2.h5  --pairs 1
 
-```
+    ```
 
 - For example, running 
 ```bash
